@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* link should not have  underline */
+html a{
+  text-decoration: none;
+}
+
+td>a:link, td>a:hover, td>a:visited,td>a:active {
+  text-decoration: none;
+  color: inherit;
+}
+a.active{
+  color:brown !important; 
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wait Please Loading */
+.icm-modal{
+  display: none;
+  position: fixed;
+  z-index: 99999999999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, .8) url('loading.gif') 50% 50% no-repeat;
+}
+body.loading .icm-modal{
+  display: block;
+}
+body.loading{
+  overflow: hidden;
+}
+
+/* table.product-public>tbody>tr>td{
+  line-height: 5mm;
+} */
+table.product-public>tbody>tr>td{
+  line-height: 80%;
+}
